@@ -7,26 +7,23 @@
     tools:context=".RecomendationListActivity">
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/background_App"
         android:orientation="vertical"
         tools:context=".RoutineListActivity">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:orientation="horizontal">
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            android:textAlignment="center">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="91dp"
+                android:layout_height="match_parent"
                 android:src="@drawable/ic_home" />
 
             <ImageView
@@ -34,37 +31,48 @@
                 android:layout_height="100dp"
                 android:src="@drawable/ic_light" />
 
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_book" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_person" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@color/background_Card"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="Arrugas de la cara"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+
         </LinearLayout>
 
     </FrameLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:background="@color/background_Card"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-8dp">
-
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/ic_menu" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
-            android:text="Arrugas de la cara"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="40sp" />
-    </LinearLayout>
-
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnNewRoutine4"
+        android:id="@+id/btnRemedy"
         android:layout_width="223dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center|bottom"
@@ -80,7 +88,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnNewRoutine5"
+        android:id="@+id/btnDiet"
         android:layout_width="223dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center|bottom"
@@ -96,7 +104,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnNewRoutine6"
+        android:id="@+id/btnExercise"
         android:layout_width="223dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center|bottom"
@@ -112,7 +120,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnNewRoutine7"
+        android:id="@+id/btnReturn"
         android:layout_width="223dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center|bottom"
@@ -126,29 +134,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.425"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_book"
-        tools:layout_editor_absoluteX="200dp"
-        tools:layout_editor_absoluteY="628dp" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_person"
-        tools:layout_editor_absoluteX="300dp"
-        tools:layout_editor_absoluteY="628dp" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_home"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="628dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
