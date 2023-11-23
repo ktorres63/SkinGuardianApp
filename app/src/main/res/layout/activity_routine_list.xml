@@ -33,10 +33,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical">
         <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginHorizontal="32dp"
+            android:id="@+id/rvRoutines"
             android:layout_width="match_parent"
             android:layout_height="470dp"
             />
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNewRoutine"
             android:layout_width="223dp"
             android:layout_height="wrap_content"
             android:text="Nueva rutina"

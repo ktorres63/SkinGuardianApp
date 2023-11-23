@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:background="@color/background_App"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etRoutine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingresa una rutina"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"/>
+
+    <Button
+        android:id="@+id/btnAddRoutine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/background_button"
+        android:text="Crear Rutina" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
