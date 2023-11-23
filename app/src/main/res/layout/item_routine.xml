@@ -19,6 +19,7 @@
 
         <TextView
             android:id="@+id/tvRoutine"
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="Utilizar protector Solar" />
