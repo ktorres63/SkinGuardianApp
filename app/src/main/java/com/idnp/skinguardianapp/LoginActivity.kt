@@ -22,8 +22,8 @@ class LoginActivity : AppCompatActivity() {
         ingresarButton.setOnClickListener(View.OnClickListener {
 
 
-            usuarioEditText = findViewById(R.id.idUsuario)
-            contraseniaEditText = findViewById(R.id.idContrasenia)
+            usuarioEditText = findViewById(R.id.etUser)
+            contraseniaEditText = findViewById(R.id.etPassw)
 
             val usuario: String = usuarioEditText.text.toString()
             val contrasenia: String = contraseniaEditText.text.toString()
