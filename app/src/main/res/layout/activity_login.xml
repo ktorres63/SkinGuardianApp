@@ -1,94 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_App"
+    android:paddingHorizontal="43dp"
     tools:context=".LoginActivity">
 
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="194dp"
+        android:id="@+id/ivPerfil"
+        android:layout_width="200dp"
         android:layout_height="211dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="101dp"
-        android:layout_marginEnd="116dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/perfil2" />
 
     <TextView
-        android:id="@+id/textUsuario"
+        android:id="@+id/tvUser"
         android:layout_width="108dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="158dp"
+        android:layout_marginTop="32dp"
         android:text="Usuario"
         android:textColor="@color/black"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPerfil" />
 
     <EditText
-        android:id="@+id/idUsuario"
+        android:id="@+id/etUser"
         android:layout_width="203dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textUsuario"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="110dp"
-        android:layout_marginBottom="34dp"
-        android:background="@drawable/edittext"
-        android:backgroundTint="@color/TextFormulario"
-        android:contentDescription="Campo usuario" />
+        android:layout_height="33dp"
+        android:layout_marginStart="10dp"
+        android:background="@color/background_Card"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/tvUser"
+        app:layout_constraintStart_toEndOf="@+id/tvPassw"
+
+        />
 
     <TextView
-        android:id="@+id/textConstrasenia"
+        android:id="@+id/tvPassw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/idUsuario"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="138dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="129dp"
+        android:layout_marginTop="12dp"
         android:text="Contraseña"
-        android:textColor="@color/TextFormulario"
-        android:textSize="24sp" />
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUser" />
 
     <EditText
-        android:id="@+id/idContrasenia"
+        android:id="@+id/etPassw"
         android:layout_width="203dp"
-        android:inputType="textPassword"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textConstrasenia"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="109dp"
-        android:layout_marginBottom="34dp"
-        android:background="@drawable/edittext"
-        android:backgroundTint="@color/TextFormulario"
-        android:contentDescription="Campo usuario" />
+        android:layout_height="33dp"
+        android:layout_marginStart="10dp"
+        android:background="@color/background_Card"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPassw"
+        app:layout_constraintStart_toEndOf="@+id/tvPassw" />
 
 
     <Button
         android:id="@+id/buttonIngresar"
         android:layout_width="177dp"
         android:layout_height="38dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="111dp"
-        android:layout_marginEnd="123dp"
-        android:layout_marginBottom="131dp"
-        android:backgroundTint="#36C9C6"
-        android:text="Ingresar" />
+        android:layout_marginBottom="184dp"
+        android:backgroundTint="@color/background_button"
+        android:text="Ingresar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</RelativeLayout >
+</androidx.constraintlayout.widget.ConstraintLayout>
