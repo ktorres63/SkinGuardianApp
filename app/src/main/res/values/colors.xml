@@ -8,8 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="background_App">#C0BBCD</color>
-    <color name="background_button">#8A64BA</color>
-    <color name="background_Card">#D9D9D9</color>
+    <color name="background_App">#DDF7AFA8</color>
+    <color name="background_button">#c5aed4</color>
+    <color name="background_Card">#EDE9E9</color>
 
 </resources>
