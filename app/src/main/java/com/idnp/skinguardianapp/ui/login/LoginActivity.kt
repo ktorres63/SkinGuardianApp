@@ -4,13 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
-import com.idnp.skinguardianapp.ProfileActivity
-import com.idnp.skinguardianapp.R
 import com.idnp.skinguardianapp.databinding.ActivityLoginBinding
-import com.idnp.skinguardianapp.ui.home.HomeActivity
+import com.idnp.skinguardianapp.ui.home.BaseActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -27,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
             val passw: String = binding.etPassw.text.toString()
 
             if (user == "carlos" && passw == "1234") {
-                val intent = Intent(this, HomeActivity::class.java)
+                val intent = Intent(this, BaseActivity::class.java)
                 startActivity(intent)
             } else {
                 Toast.makeText(
