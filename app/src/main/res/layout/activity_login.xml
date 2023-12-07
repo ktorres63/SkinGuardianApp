@@ -37,8 +37,11 @@
         android:layout_marginStart="10dp"
         android:background="@color/background_Card"
         android:maxLines="1"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/tvUser"
         app:layout_constraintStart_toEndOf="@+id/tvPassw"
+        android:textCursorDrawable="@drawable/text_cursor"
+
 
         />
 
@@ -60,8 +63,11 @@
         android:layout_marginStart="10dp"
         android:background="@color/background_Card"
         android:maxLines="1"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="@+id/tvPassw"
-        app:layout_constraintStart_toEndOf="@+id/tvPassw" />
+        app:layout_constraintStart_toEndOf="@+id/tvPassw"
+        android:textCursorDrawable="@drawable/text_cursor"/>
 
 
     <Button

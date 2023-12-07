@@ -28,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
             val usuario: String = usuarioEditText.text.toString()
             val contrasenia: String = contraseniaEditText.text.toString()
 
-            if (usuario == "73321272" && contrasenia == "1234") {
+            if (usuario == "carlos" && contrasenia == "1234") {
                 val intent = Intent(this, ProfileActivity::class.java)
                 startActivity(intent)
             } else {
