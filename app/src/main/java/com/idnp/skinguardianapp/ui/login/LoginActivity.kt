@@ -9,29 +9,24 @@ import android.widget.EditText
 import android.widget.Toast
 import com.idnp.skinguardianapp.ProfileActivity
 import com.idnp.skinguardianapp.R
+import com.idnp.skinguardianapp.databinding.ActivityLoginBinding
 import com.idnp.skinguardianapp.ui.home.HomeActivity
 
 class LoginActivity : AppCompatActivity() {
 
     // Declarar los EditText
-    private lateinit var usuarioEditText: EditText
-    private lateinit var contraseniaEditText: EditText
+    private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val ingresarButton: Button = findViewById(R.id.buttonIngresar)
-        ingresarButton.setOnClickListener(View.OnClickListener {
+        binding.btnLogin.setOnClickListener(View.OnClickListener {
+            val user: String = binding.etUser.text.toString()
+            val passw: String = binding.etPassw.text.toString()
 
-
-            usuarioEditText = findViewById(R.id.etUser)
-            contraseniaEditText = findViewById(R.id.etPassw)
-
-            val usuario: String = usuarioEditText.text.toString()
-            val contrasenia: String = contraseniaEditText.text.toString()
-
-            if (usuario == "carlos" && contrasenia == "1234") {
+            if (user == "carlos" && passw == "1234") {
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
             } else {
