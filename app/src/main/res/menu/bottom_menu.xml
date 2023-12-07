@@ -13,5 +13,4 @@
         android:icon="@drawable/ic_book"
         android:title="@string/routines" />
 
-
 </menu>
