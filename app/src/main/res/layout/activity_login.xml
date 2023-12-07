@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/background_App"
     android:paddingHorizontal="43dp"
-    tools:context=".LoginActivity">
+    tools:context=".ui.login.LoginActivity">
 
 
     <ImageView
@@ -71,10 +71,11 @@
     <Button
         android:id="@+id/buttonIngresar"
         android:layout_width="177dp"
-        android:layout_height="38dp"
+        android:layout_height="58dp"
         android:layout_marginBottom="184dp"
         android:backgroundTint="@color/background_button"
         android:text="Ingresar"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

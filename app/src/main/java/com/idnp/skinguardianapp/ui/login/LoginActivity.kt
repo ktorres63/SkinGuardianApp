@@ -1,4 +1,4 @@
-package com.idnp.skinguardianapp
+package com.idnp.skinguardianapp.ui.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.idnp.skinguardianapp.ProfileActivity
+import com.idnp.skinguardianapp.R
+import com.idnp.skinguardianapp.ui.home.HomeActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -29,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
             val contrasenia: String = contraseniaEditText.text.toString()
 
             if (usuario == "carlos" && contrasenia == "1234") {
-                val intent = Intent(this, ProfileActivity::class.java)
+                val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
             } else {
                 Toast.makeText(
