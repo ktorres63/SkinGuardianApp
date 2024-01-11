@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
             val user: String = binding.etUser.text.toString()
             val passw: String = binding.etPassw.text.toString()
 
-            if (user == "carlos" && passw == "1234") {
+            if (user == "c" && passw == "c") {
                 val intent = Intent(this, BaseActivity::class.java)
                 startActivity(intent)
             } else {

@@ -11,6 +11,10 @@
     <item
         android:id="@+id/routinesFragment"
         android:icon="@drawable/ic_book"
-        android:title="@string/routines" />
+        android:title="@string/routines"/>
 
+    <item
+        android:id="@+id/productsFragment"
+        android:icon="@drawable/ic_tube_sc"
+        android:title="@string/products" />
 </menu>

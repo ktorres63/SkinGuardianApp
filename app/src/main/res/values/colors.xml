@@ -11,5 +11,7 @@
     <color name="background_App">#DDF7AFA8</color>
     <color name="background_button">#c5aed4</color>
     <color name="background_Card">#EDE9E9</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#4CAF50</color>
 
 </resources>

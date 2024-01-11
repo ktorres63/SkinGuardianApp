@@ -25,4 +25,9 @@
         android:name="com.idnp.skinguardianapp.ui.home.BaseActivity"
         android:label="activity_base"
         tools:layout="@layout/activity_base" />
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.idnp.skinguardianapp.ui.products.ProductsFragment"
+        android:label="fragment_products"
+        tools:layout="@layout/fragment_products" />
 </navigation>
