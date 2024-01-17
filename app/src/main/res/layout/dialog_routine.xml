@@ -16,10 +16,10 @@
         android:backgroundTint="@color/white"/>
 
     <Button
+        android:backgroundTint="@color/background_button"
         android:id="@+id/btnAddRoutine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/background_button"
         android:text="Crear Rutina" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
