@@ -1,4 +1,4 @@
-package com.idnp.skinguardianapp
+package com.idnp.skinguardianapp.ui.routines
 
 import android.graphics.Paint
 import android.util.Log
@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.idnp.skinguardianapp.R
 
 class RoutinesViewHolder(view: View): RecyclerView.ViewHolder(view) {
     private val tvRoutine: TextView = view.findViewById(R.id.tvRoutine)
