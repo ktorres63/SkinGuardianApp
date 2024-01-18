@@ -3,15 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_App"
     tools:context=".ui.home.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.idnp.skinguardianapp.ProgressBar
+        android:id="@+id/lienzo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home Fragment"
-        android:textSize="33sp"
-        android:textStyle="bold"/>
+        android:layout_height="match_parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNewRoutine"
+
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/background_button"
+        android:text="Incrementar Barra de Progreso"
+        android:textColor="@color/white"
+
+        />
+
 
 </FrameLayout>
