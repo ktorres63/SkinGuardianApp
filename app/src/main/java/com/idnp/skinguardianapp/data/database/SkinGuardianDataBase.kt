@@ -5,8 +5,24 @@ import androidx.room.RoomDatabase
 import com.idnp.skinguardianapp.data.database.dao.UserDao
 import com.idnp.skinguardianapp.data.database.entities.UserEntity
 
-@Database(entities = [ UserEntity::class],version = 1, exportSchema = false)
+@Database(entities = [ UserEntity::class],version = 1)
 abstract class SkinGuardianDataBase: RoomDatabase()  {
-    abstract fun getUsereDao(): UserDao
+    abstract fun getUserDao(): UserDao
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

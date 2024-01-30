@@ -1,22 +1,40 @@
 package com.idnp.skinguardianapp.data.database.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Update
 import com.idnp.skinguardianapp.data.database.entities.UserEntity
 
 @Dao
 interface UserDao {
-    @Query("SELECT * FROM UserEntity")
-    fun getAll(): List<UserEntity>
-
-    @Query("SELECT * FROM UserEntity WHERE uid IN (:uids)")
-    fun loadAllByIds(uids: IntArray): List<UserEntity>
-
-    @Insert
-    fun insertAll(vararg users: UserEntity )
-
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertUser(user: UserEntity )
+    @Update
+    suspend fun updateUser(user: UserEntity)
     @Delete
-    fun delete(user: UserEntity)
+    suspend fun delete(user: UserEntity)
+    @Query("SELECT * FROM users ORDER BY uid DESC")
+    fun getAll(): LiveData<List<UserEntity>>
+
+//    @Query("SELECT * FROM UserEntity WHERE uid IN (:uids)")
+//    fun loadAllByIds(uids: IntArray): List<UserEntity>
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
