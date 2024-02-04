@@ -1,4 +1,4 @@
-package com.idnp.skinguardianapp.ui.routines
+package com.idnp.skinguardianapp.ui.view.routines
 
 import android.app.Dialog
 import android.os.Bundle
@@ -12,6 +12,8 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.idnp.skinguardianapp.R
+import com.idnp.skinguardianapp.data.adapters.RoutinesAdapter
+import com.idnp.skinguardianapp.data.model.Routine
 import com.idnp.skinguardianapp.databinding.FragmentRoutinesBinding
 
 

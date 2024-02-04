@@ -1,4 +1,4 @@
-package com.idnp.skinguardianapp.ui.products
+package com.idnp.skinguardianapp.ui.view.products
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,8 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.idnp.skinguardianapp.R
+import com.idnp.skinguardianapp.databinding.FragmentProductsBinding
 
 class ProductsFragment : Fragment() {
+
+    private var _binding: FragmentProductsBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

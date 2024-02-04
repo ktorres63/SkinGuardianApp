@@ -12,16 +12,10 @@ import com.idnp.skinguardianapp.data.database.entities.UserEntity
 @Dao
 interface UserDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertUser(user: UserEntity )
-    @Update
-    suspend fun updateUser(user: UserEntity)
-    @Delete
-    suspend fun delete(user: UserEntity)
-    @Query("SELECT * FROM users ORDER BY uid DESC")
-    fun getAll(): LiveData<List<UserEntity>>
+    fun insertUser(user: UserEntity )
+    @Query("SELECT * FROM users")
+    fun getAllUsers(): List<UserEntity>
 
-//    @Query("SELECT * FROM UserEntity WHERE uid IN (:uids)")
-//    fun loadAllByIds(uids: IntArray): List<UserEntity>
 }
 
 

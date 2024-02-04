@@ -1,4 +1,4 @@
-package com.idnp.skinguardianapp
+package com.idnp.skinguardianapp.ui.view.home
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color

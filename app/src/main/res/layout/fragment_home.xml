@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/background_App"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.view.home.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <com.idnp.skinguardianapp.ProgressBar
+    <com.idnp.skinguardianapp.ui.view.home.ProgressBar
         android:id="@+id/lienzo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

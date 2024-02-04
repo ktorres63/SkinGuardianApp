@@ -1,9 +1,10 @@
-package com.idnp.skinguardianapp.ui.routines
+package com.idnp.skinguardianapp.data.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.idnp.skinguardianapp.R
+import com.idnp.skinguardianapp.data.model.Routine
 
 class RoutinesAdapter(var routines: List<Routine>, private val onRoutineSelected: (Int)-> Unit): RecyclerView.Adapter<RoutinesViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RoutinesViewHolder {

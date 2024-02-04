@@ -7,27 +7,32 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.idnp.skinguardianapp.ui.profile.ProfileFragment"
+        android:name="com.idnp.skinguardianapp.ui.view.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/routinesFragment"
-        android:name="com.idnp.skinguardianapp.ui.routines.RoutinesFragment"
+        android:name="com.idnp.skinguardianapp.ui.view.routines.RoutinesFragment"
         android:label="fragment_routines"
         tools:layout="@layout/fragment_routines" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.idnp.skinguardianapp.ui.home.HomeFragment"
+        android:name="com.idnp.skinguardianapp.ui.view.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <activity
         android:id="@+id/baseActivity"
-        android:name="com.idnp.skinguardianapp.ui.home.BaseActivity"
+        android:name="com.idnp.skinguardianapp.ui.view.home.BaseActivity"
         android:label="activity_base"
         tools:layout="@layout/activity_base" />
     <fragment
         android:id="@+id/productsFragment"
-        android:name="com.idnp.skinguardianapp.ui.products.ProductsFragment"
+        android:name="com.idnp.skinguardianapp.ui.view.products.ProductsFragment"
         android:label="fragment_products"
         tools:layout="@layout/fragment_products" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.idnp.skinguardianapp.ui.view.login.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.idnp.skinguardianapp.ui.home
+package com.idnp.skinguardianapp.ui.view.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
