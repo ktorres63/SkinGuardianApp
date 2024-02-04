@@ -9,7 +9,12 @@
         android:id="@+id/profileFragment"
         android:name="com.idnp.skinguardianapp.ui.view.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+<!--        <argument-->
+<!--            android:name="userName"-->
+<!--            app:argType="string" />-->
+
+    </fragment>
     <fragment
         android:id="@+id/routinesFragment"
         android:name="com.idnp.skinguardianapp.ui.view.routines.RoutinesFragment"
@@ -24,7 +29,11 @@
         android:id="@+id/baseActivity"
         android:name="com.idnp.skinguardianapp.ui.view.home.BaseActivity"
         android:label="activity_base"
-        tools:layout="@layout/activity_base" />
+        tools:layout="@layout/activity_base" >
+
+
+
+    </activity>
     <fragment
         android:id="@+id/productsFragment"
         android:name="com.idnp.skinguardianapp.ui.view.products.ProductsFragment"

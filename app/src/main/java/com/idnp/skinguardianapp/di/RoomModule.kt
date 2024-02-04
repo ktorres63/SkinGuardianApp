@@ -21,5 +21,4 @@ object RoomModule {
     @Singleton
     @Provides
     fun provideUserDao(database: SkinGuardianDataBase) = database.getUserDao()
-//        database.getUserDao()
 }

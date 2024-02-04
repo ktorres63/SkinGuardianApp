@@ -3,6 +3,7 @@ package com.idnp.skinguardianapp.ui.view.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
@@ -50,6 +51,8 @@ class LoginActivity : AppCompatActivity() {
             val userObj = User(0, user, passw)
             if (loginViewModel.getSuccessfulLogin(userObj)) {
                 val intent = Intent(this, BaseActivity::class.java)
+                val nameUser:String = loginViewModel.getUser().user
+                intent.putExtra("nameUser",nameUser)
                 startActivity(intent)
             } else {
                 Toast.makeText(
@@ -58,6 +61,7 @@ class LoginActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
+
 
 
         }
