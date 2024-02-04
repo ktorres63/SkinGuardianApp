@@ -16,6 +16,9 @@ interface UserDao {
     @Query("SELECT * FROM users")
     fun getAllUsers(): List<UserEntity>
 
+    @Query("SELECT * FROM users WHERE uid = :userId")
+    fun getUser(userId: Int): UserEntity
+
 }
 
 

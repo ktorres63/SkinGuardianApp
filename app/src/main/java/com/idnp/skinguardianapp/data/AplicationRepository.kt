@@ -16,4 +16,8 @@ class ApplicationRepository @Inject constructor(
     fun insertUser(user: User) {
         userDao.insertUser(user.toDataBase())
     }
+
+    fun getUser(id:Int):User{
+        return userDao.getUser(id).toDomain()
+    }
 }

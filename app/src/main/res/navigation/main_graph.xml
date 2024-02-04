@@ -31,8 +31,6 @@
         android:label="activity_base"
         tools:layout="@layout/activity_base" >
 
-
-
     </activity>
     <fragment
         android:id="@+id/productsFragment"

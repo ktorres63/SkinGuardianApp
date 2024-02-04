@@ -51,8 +51,8 @@ class LoginActivity : AppCompatActivity() {
             val userObj = User(0, user, passw)
             if (loginViewModel.getSuccessfulLogin(userObj)) {
                 val intent = Intent(this, BaseActivity::class.java)
-                val nameUser:String = loginViewModel.getUser().user
-                intent.putExtra("nameUser",nameUser)
+//                val nameUser:String = loginViewModel.getUser().user
+//                intent.putExtra("nameUser",nameUser)
                 startActivity(intent)
             } else {
                 Toast.makeText(

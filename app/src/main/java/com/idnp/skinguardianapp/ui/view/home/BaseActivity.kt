@@ -12,8 +12,10 @@ import com.idnp.skinguardianapp.R
 import com.idnp.skinguardianapp.databinding.ActivityBaseBinding
 import com.idnp.skinguardianapp.ui.view.login.RegisterUserFragment
 import com.idnp.skinguardianapp.ui.view.profile.ProfileFragment
-//import com.idnp.skinguardianapp.ui.view.profile.ProfileFragmentArgs
+import dagger.hilt.android.AndroidEntryPoint
 
+//import com.idnp.skinguardianapp.ui.view.profile.ProfileFragmentArgs
+@AndroidEntryPoint
 class BaseActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBaseBinding
     private lateinit var navController: NavController
