@@ -17,4 +17,8 @@
         android:id="@+id/productsFragment"
         android:icon="@drawable/ic_tube_sc"
         android:title="@string/products" />
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_gear"
+        android:title="@string/settings" />
 </menu>

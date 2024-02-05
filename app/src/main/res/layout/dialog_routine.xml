@@ -7,10 +7,19 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/etRoutine"
+        android:id="@+id/etRoutineTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingresa una rutina"
+        android:hint="titulo"
+        android:maxLines="1"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"/>
+    <EditText
+        android:id="@+id/etRoutineDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripcion"
         android:layout_marginBottom="12dp"
         android:textColor="@color/white"
         android:backgroundTint="@color/white"/>

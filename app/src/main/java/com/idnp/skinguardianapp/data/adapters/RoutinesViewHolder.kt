@@ -8,22 +8,27 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.idnp.skinguardianapp.R
 import com.idnp.skinguardianapp.data.model.Routine
+import com.idnp.skinguardianapp.databinding.ItemRoutineBinding
 
 class RoutinesViewHolder(view: View): RecyclerView.ViewHolder(view) {
-    private val tvRoutine: TextView = view.findViewById(R.id.tvRoutine)
-    private val cbRoutine: CheckBox = view.findViewById(R.id.cbRoutine)
+    private val binding = ItemRoutineBinding.bind(view)
+    private val tvRoutineTitle = binding.tvRoutineTitle
+    private val tvRoutineDesc = binding.tvRoutineDescription
 
     fun render(routine: Routine){
-        tvRoutine.text = routine.name
-        cbRoutine.isChecked = routine.isSelected
+        tvRoutineTitle.text = routine.title
+        tvRoutineDesc.text = routine.Description
+        binding.cbRoutine.isChecked = routine.isSelected
 
         if(routine.isSelected){
-            tvRoutine.paintFlags = tvRoutine.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+            tvRoutineTitle.paintFlags = tvRoutineTitle.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+            tvRoutineDesc.paintFlags = tvRoutineDesc.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
             Log.i("checkbox Checked", "ON")
 
         }
         else{
-            tvRoutine.paintFlags = tvRoutine.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
+            tvRoutineTitle.paintFlags = tvRoutineTitle.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
+            tvRoutineDesc.paintFlags = tvRoutineDesc.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
         }
 
 

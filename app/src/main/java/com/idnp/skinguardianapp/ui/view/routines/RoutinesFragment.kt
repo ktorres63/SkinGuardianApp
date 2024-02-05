@@ -25,9 +25,7 @@ class RoutinesFragment : Fragment() {
     private lateinit var btnAddRoutine: AppCompatButton
 
     private val routines = mutableListOf(
-        Routine("utlizar protector Solar"),
-        Routine("Aplicar Hidratante"),
-        Routine("Aplicar Dermolimpiador")
+        Routine("protector Solar","utilizar protector solar todos los dias"),
     )
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,6 +41,12 @@ class RoutinesFragment : Fragment() {
         initUI()
         initListeners()
     }
+    private fun initComponent(){
+
+        rvRoutines = binding.rvRoutines
+        btnAddRoutine = binding.btnNewRoutine
+
+    }
     private fun initListeners() {
         btnAddRoutine.setOnClickListener {
             showDialog()
@@ -55,30 +59,25 @@ class RoutinesFragment : Fragment() {
         rvRoutines.adapter = routinesAdapter
 
     }
-    private fun initComponent(){
 
-        rvRoutines = binding.rvRoutines
-        btnAddRoutine = binding.btnNewRoutine
-
-    }
     private fun showDialog(){
         val dialog = Dialog(requireContext())
 
         dialog.setContentView(R.layout.dialog_routine)
 
         val btnAddRoutine: Button = dialog.findViewById(R.id.btnAddRoutine)
-        val etRoutine: EditText = dialog.findViewById(R.id.etRoutine)
+        val etRoutineTitle: EditText = dialog.findViewById(R.id.etRoutineTitle)
+        val etRoutineDescription: EditText = dialog.findViewById(R.id.etRoutineDescription)
         btnAddRoutine.setOnClickListener {
-            val currentRoutine = etRoutine.text.toString()
+            val currentRoutineTitle = etRoutineTitle.text.toString()
+            val currentRoutineDesc = etRoutineDescription.text.toString()
 
-            if(currentRoutine.isNotEmpty()){
-                routines.add(Routine(etRoutine.text.toString()))
+            if(currentRoutineTitle.isNotEmpty() && currentRoutineDesc.isNotEmpty()){
+                routines.add(Routine(etRoutineTitle.text.toString(),etRoutineDescription.text.toString()))
                 updateTasks()
                 dialog.hide()
 
             }
-
-
         }
         dialog.show()
 

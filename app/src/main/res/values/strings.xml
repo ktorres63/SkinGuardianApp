@@ -6,10 +6,13 @@
     <string name="home">Home</string>
     <string name="profile">Perfil</string>
     <string name="routines">Rutinas</string>
-    <string name="products">productos</string>
+    <string name="products">Productos</string>
+    <string name="settings">Configuracion</string>
 
     <string name="user">Usuario</string>
     <string name="password">Contraseña</string>
     <string name="add">Añadir</string>
     <string name="register">registrar</string>
+
+
 </resources>
