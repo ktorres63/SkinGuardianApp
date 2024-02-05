@@ -70,10 +70,10 @@
         android:id="@+id/btnLogin"
         android:layout_width="177dp"
         android:layout_height="58dp"
-
-        android:backgroundTint="@color/background_button"
+        android:layout_marginTop="13dp"
         android:text="Ingresar"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
+        android:background="@drawable/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/llContainer" />
@@ -82,10 +82,11 @@
         android:id="@+id/btnRegister"
         android:layout_width="177dp"
         android:layout_height="58dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="184dp"
-        android:backgroundTint="@color/background_button"
+        android:background="@drawable/button2"
+        android:textColor="@color/white"
         android:text="@string/register"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />

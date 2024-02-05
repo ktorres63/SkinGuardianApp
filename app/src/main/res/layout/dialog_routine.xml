@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="250dp"
-    android:orientation="vertical"
+    android:layout_width="255dp"
     android:layout_height="wrap_content"
     android:background="@color/background_App"
+    android:orientation="vertical"
     android:padding="16dp">
 
     <EditText
         android:id="@+id/etRoutineTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="titulo"
-        android:maxLines="1"
         android:layout_marginBottom="12dp"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/white"/>
+        android:backgroundTint="@color/white"
+        android:hint="Titulo"
+        android:maxLines="1"
+        android:textColor="@color/white" />
+
     <EditText
         android:id="@+id/etRoutineDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Descripcion"
         android:layout_marginBottom="12dp"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/white"/>
+        android:backgroundTint="@color/white"
+        android:hint="Descripcion"
+        android:textColor="@color/white" />
 
     <Button
-        android:backgroundTint="@color/background_button"
         android:id="@+id/btnAddRoutine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Crear Rutina" />
+        android:background="@drawable/button3"
+        android:text="Crear"
+        android:textColor="@color/white" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
