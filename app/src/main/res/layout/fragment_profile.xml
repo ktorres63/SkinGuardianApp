@@ -2,132 +2,137 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_App"
     tools:context=".ui.view.profile.ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="193dp"
-        android:layout_height="193dp"
-        android:contentDescription="ImagendeUsuario"
-        android:src="@drawable/ej_perfil"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228"
-        tools:src="@drawable/ej_perfil" />
-
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
         android:text="PERFIL DE USUARIO"
         android:textAlignment="center"
         android:textSize="33sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.080" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvName"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvUserPhoto"
+        android:layout_width="193dp"
+        android:layout_height="193dp"
+        android:layout_marginTop="104dp"
+        app:cardCornerRadius="128dp"
+        app:cardElevation="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ej_perfil" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
         android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:text="Nombre"
-        android:textAlignment="center"
-        android:textSize="33sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="-61dp"
+        app:cardBackgroundColor="@color/background_Card2"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/cvUserPhoto">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:text="Lesiones:"
-        android:textSize="23sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.679" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="33dp">
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:text=""
-        android:textSize="23sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.767"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.679" />
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="75dp"
+                android:textSize="33sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="hello Nombre"
+                android:textColor="@color/black"
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:text=""
-        android:textSize="23sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.767"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.753" />
+                />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:text=""
-        android:textSize="23sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.767"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606" />
+            <TextView
+                android:id="@+id/tvInjuries"
+                style="@style/Subtitle"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Lesiones:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:text="Tipo de piel:"
-        android:textSize="23sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606" />
+            <TextView
+                android:id="@+id/tvSkinType"
+                style="@style/Subtitle"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Tipo de piel:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInjuries" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:text="Quemaduras:"
-        android:textSize="23sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.753" />
+            <TextView
+                android:id="@+id/tvSkinBurns"
+                style="@style/Subtitle"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Quemaduras:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSkinType" />
+
+            <TextView
+                android:id="@+id/tvUserInjuries"
+                style="@style/SimpleLine"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Ninguna"
+                app:layout_constraintBottom_toBottomOf="@+id/tvInjuries"
+                app:layout_constraintStart_toEndOf="@+id/tvInjuries" />
+
+            <TextView
+                android:id="@+id/tvUserSkinType"
+                style="@style/SimpleLine"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Mixta"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSkinType"
+                app:layout_constraintStart_toEndOf="@+id/tvSkinType" />
+
+            <TextView
+                android:id="@+id/tvUserSkinBurns"
+                style="@style/SimpleLine"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="No"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSkinBurns"
+                app:layout_constraintStart_toEndOf="@+id/tvSkinBurns" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

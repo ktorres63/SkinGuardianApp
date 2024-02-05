@@ -19,9 +19,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
-
     private val profileViewModel: ProfileViewModel by viewModels()
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,7 +34,7 @@ class ProfileFragment : Fragment() {
 
         var idUser = (requireActivity().application as SkinGuardian).userId
         val name = profileViewModel.getUser(idUser).user
-        binding.tvName.text = "hola $name"
+        binding.tvName.text =  name
 
         Log.i("->ProfileF",idUser.toString() )
 
