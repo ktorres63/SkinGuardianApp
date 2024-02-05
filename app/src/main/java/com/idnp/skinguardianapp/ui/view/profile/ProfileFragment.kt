@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.activity.viewModels
 import androidx.fragment.app.viewModels
 import com.idnp.skinguardianapp.R
+import com.idnp.skinguardianapp.data.database.SkinGuardian
 import com.idnp.skinguardianapp.databinding.FragmentProfileBinding
 import com.idnp.skinguardianapp.ui.viewModel.LoginViewModel
 import com.idnp.skinguardianapp.ui.viewModel.ProfileViewModel
@@ -21,27 +22,23 @@ class ProfileFragment : Fragment() {
 
     private val profileViewModel: ProfileViewModel by viewModels()
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentProfileBinding.inflate(layoutInflater,container,false)
+        _binding = FragmentProfileBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        val name:String = profileViewModel.getUser(0).toString()
-//
-//       Log.i("ProfileF",name)
-//        val args = ProfileFragmentArgs.fromBundle(requireArguments())
-//        val dataString = args.userName
-//
-//        binding.tvName.text = dataString
-//        val miString = arguments?.getString("clave_string")
-//        Log.i("Message","$miString")
+        var idUser = (requireActivity().application as SkinGuardian).userId
+        val name = profileViewModel.getUser(idUser).user
+        binding.tvName.text = "hola $name"
 
+        Log.i("->ProfileF",idUser.toString() )
 
     }
 

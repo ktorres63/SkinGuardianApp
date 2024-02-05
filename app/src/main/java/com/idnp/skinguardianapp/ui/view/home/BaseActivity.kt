@@ -32,30 +32,10 @@ class BaseActivity : AppCompatActivity() {
     }
 
     private fun initNavigation() {
+
         val navHost = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         navController = navHost.navController
         binding.bottomNavView.setupWithNavController(navController)
-
-        val nameUser :String = intent.extras?.getString("nameUser").orEmpty()
-        Log.i("Base?: ","hello $nameUser")
-
-
-//        val action = BaseActivityDirections.actionBaseActivityToProfileFragment(nameUser)
-//        val navController2 = findNavController(R.id.fragmentContainerView)
-//        navController2.navigate(action)
-
-//        val bundle = Bundle().apply {
-//            putString("clave_string", "Hola desde la Activity")
-//        }
-//
-//         // Crear una instancia del fragmento y asignarle el Bundle
-//        val fragment = ProfileFragment()
-//        fragment.arguments = bundle
-//
-//        // Iniciar la transacción para agregar el fragmento al contenedor
-//        supportFragmentManager.beginTransaction()
-//            .replace(R.id.fragmentContainerView, fragment)
-//            .commit()
 
     }
 }

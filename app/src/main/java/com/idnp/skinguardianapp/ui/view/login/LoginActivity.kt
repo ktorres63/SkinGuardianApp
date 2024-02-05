@@ -13,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.FragmentContainer
 import androidx.fragment.app.FragmentContainerView
 import com.idnp.skinguardianapp.R
+import com.idnp.skinguardianapp.data.database.SkinGuardian
 import com.idnp.skinguardianapp.data.model.User
 import com.idnp.skinguardianapp.databinding.ActivityLoginBinding
 import com.idnp.skinguardianapp.ui.view.home.BaseActivity
@@ -51,8 +52,11 @@ class LoginActivity : AppCompatActivity() {
             val userObj = User(0, user, passw)
             if (loginViewModel.getSuccessfulLogin(userObj)) {
                 val intent = Intent(this, BaseActivity::class.java)
-//                val nameUser:String = loginViewModel.getUser().user
-//                intent.putExtra("nameUser",nameUser)
+
+                val indexUserS = loginViewModel.getIndexUser()
+                (application as SkinGuardian).userId = indexUserS
+
+                Log.i("login->", indexUserS.toString())
                 startActivity(intent)
             } else {
                 Toast.makeText(

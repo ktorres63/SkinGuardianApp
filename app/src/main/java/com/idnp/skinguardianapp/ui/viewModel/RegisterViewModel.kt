@@ -12,8 +12,6 @@ import javax.inject.Inject
 class RegisterViewModel @Inject constructor(
      private val repository: ApplicationRepository
 ) : ViewModel() {
-    private val receivedValue = MutableLiveData<String>()
-
 
     fun insertUserInDatabase(user: User) {
         repository.insertUser(user)

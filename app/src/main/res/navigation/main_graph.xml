@@ -14,6 +14,9 @@
 <!--            android:name="userName"-->
 <!--            app:argType="string" />-->
 
+        <argument
+            android:name="idUser"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/routinesFragment"

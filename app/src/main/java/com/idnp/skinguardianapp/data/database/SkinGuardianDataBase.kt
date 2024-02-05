@@ -16,7 +16,7 @@ abstract class SkinGuardianDataBase: RoomDatabase()  {
 
 @HiltAndroidApp
 class SkinGuardian: Application() {
-
+    var userId: Int = 1
 }
 
 
