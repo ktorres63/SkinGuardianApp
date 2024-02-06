@@ -12,7 +12,7 @@
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="22dp"
         android:text="PERFIL DE USUARIO"
         android:textAlignment="center"
         android:textSize="33sp"
@@ -25,7 +25,7 @@
         android:id="@+id/cvUserPhoto"
         android:layout_width="193dp"
         android:layout_height="193dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="80dp"
         app:cardCornerRadius="128dp"
         app:cardElevation="22dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,6 +43,7 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cvUserDescription"
         android:layout_width="300dp"
         android:layout_height="220dp"
         android:layout_marginTop="-61dp"
@@ -63,13 +64,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="75dp"
+                android:textColor="@color/white"
                 android:textSize="33sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="hello Nombre"
-                android:textColor="@color/black"
 
                 />
 
@@ -80,6 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Lesiones:"
+                android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
@@ -89,6 +91,7 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="Tipo de piel:"
+                android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvInjuries" />
 
@@ -98,6 +101,7 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="Quemaduras:"
+                android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvSkinType" />
 
@@ -107,6 +111,7 @@
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:text="Ninguna"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="@+id/tvInjuries"
                 app:layout_constraintStart_toEndOf="@+id/tvInjuries" />
 
@@ -116,6 +121,7 @@
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:text="Mixta"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="@+id/tvSkinType"
                 app:layout_constraintStart_toEndOf="@+id/tvSkinType" />
 
@@ -125,12 +131,147 @@
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:text="No"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="@+id/tvSkinBurns"
                 app:layout_constraintStart_toEndOf="@+id/tvSkinBurns" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="370dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/background_Card2"
+        app:cardCornerRadius="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvUserDescription">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvskinProfile"
+                style="@style/Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Perfil de la Piel"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.idnp.skinguardianapp.ui.view.profile.PieChartView
+                android:id="@+id/cvPieChart"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/tvpercen1"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="% de grasa"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/tvskinProfile"
+                app:layout_constraintStart_toEndOf="@+id/cvPieChart"
+                />
+            <TextView
+                android:id="@+id/tvpercen2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="% de lesiones"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/tvpercen1"
+                app:layout_constraintStart_toEndOf="@+id/cvPieChart"
+                />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tvpercen3"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="% de arrugas"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/tvpercen2"
+                app:layout_constraintStart_toEndOf="@+id/cvPieChart"
+                />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tvpercen4"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="% de uniformidad"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/tvpercen3"
+                app:layout_constraintStart_toEndOf="@+id/cvPieChart"
+                />
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/etPercGrasa"
+                android:layout_width="53dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="@+id/tvpercen1"
+                app:layout_constraintStart_toEndOf="@+id/tvpercen1"/>
+            <EditText
+                android:inputType="number"
+                android:id="@+id/etPercLes"
+                android:layout_width="53dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="@+id/tvpercen2"
+                app:layout_constraintStart_toEndOf="@+id/tvpercen2"/>
+            <EditText
+                android:inputType="number"
+                android:id="@+id/etPercArrg"
+                android:layout_width="53dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="@+id/tvpercen3"
+                app:layout_constraintStart_toEndOf="@+id/tvpercen3"/>
+            <EditText
+                android:id="@+id/etPercUnif"
+                android:layout_width="53dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="@+id/tvpercen4"
+                app:layout_constraintStart_toEndOf="@+id/tvpercen4"/>
+
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Calcular"
+                android:textColor="@color/white"
+                android:background="@drawable/button3"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/cvPieChart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvpercen4"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 

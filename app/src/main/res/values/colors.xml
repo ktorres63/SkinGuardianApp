@@ -8,23 +8,21 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-<!--    <color name="background_App">#F7AFA8</color>-->
-<!--    <color name="background_button">#c5aed4</color>-->
-<!--    <color name="background_Card">#EDE9E9</color>-->
-<!--    <color name="background_Card2">#d5afbe</color>-->
-
 
 <!--    Paleta 1-->
     <color name="background_App">#F7AFA8</color>
     <color name="background_button">#4E5283</color>
     <color name="background_button2">#A09CB0</color>
-
-
-<!--    <color name="background_Card">#93C0A4</color> -->
     <color name="top_bar">#F0F7EE</color>
     <color name="background_Card">#7871AA</color>
+    <color name="background_Card2">#A09CB0</color>
     <color name="background_Card3">#DCE2BD</color>
 
+    <!--  pieChartColors -->
+    <color name="pieChart1">#FFFD82</color>
+    <color name="pieChart2">#FF9B71</color>
+    <color name="pieChart3">#E84855</color>
+    <color name="pieChart4">#B56B45</color>
 
 
 

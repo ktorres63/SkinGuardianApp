@@ -19,4 +19,6 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
+
+
 }
