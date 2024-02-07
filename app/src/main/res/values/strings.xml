@@ -14,6 +14,12 @@
     <string name="add">Añadir</string>
     <string name="register">registrar</string>
     <string name="app_name2">Skin Guardian</string>
+    <string name="calidad_de_piel">Calidad de piel</string>
+    <string name="sueno">Sueño</string>
+    <string name="alimentacion">Alimentación</string>
+    <string name="hidratacion">Hidratación</string>
+    <string name="estres">Estrés</string>
+    <string name="tus_estadisticas">TUS ESTADISTICAS</string>
 
 
 </resources>

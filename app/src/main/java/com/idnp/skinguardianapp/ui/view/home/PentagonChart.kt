@@ -16,56 +16,50 @@ class PentagonChart @JvmOverloads constructor(
 ) : View(context, attrs, defStyleAttr) {
 
     override fun onDraw(canvas: Canvas) {
+        drawPentagon(0.33, canvas)
+        drawPentagon(0.66, canvas)
+        drawPentagon(1.0, canvas)
+        val values = arrayOf(0.50, 0.71, 0.52, 0.10, 0.34)
+        drawPrincipal(values, canvas)
+    }
+    private fun drawPentagon(r : Double, canvas : Canvas) {
         val centerX = width / 2
         val centerY = height / 2
         val radius = min(centerX, centerY)
         val angleStep = (2 * PI) / 5
 
         val path = Path()
-        path.moveTo((centerX + radius * sin(0.0)).toFloat(), (centerY + radius * -cos(0.0)).toFloat())
+        path.moveTo((centerX + radius * r *  sin(0.0)).toFloat(), (centerY + radius * r * -cos(0.0)).toFloat())
         for (i in 1 until 5) {
             val angle = i * angleStep
-            path.lineTo((centerX + radius * sin(angle)).toFloat(), (centerY + radius * -cos(angle)).toFloat())
+            path.lineTo((centerX + radius * r * sin(angle)).toFloat(), (centerY + radius * r * -cos(angle)).toFloat())
         }
         path.close()
 
-        // Dibujar el pentágono
         val paint = Paint()
         paint.color = Color.BLACK
         paint.style = Paint.Style.STROKE
         paint.strokeWidth = 5f
         canvas.drawPath(path, paint)
+    }
 
-        val path1 = Path()
-        path1.moveTo((centerX + radius / 3 * 2 * sin(0.0)).toFloat(), (centerY + radius / 3 * 2 * -cos(0.0)).toFloat())
+    private fun drawPrincipal(v : Array<Double>, canvas : Canvas) {
+        val centerX = width / 2
+        val centerY = height / 2
+        val radius = min(centerX, centerY)
+        val angleStep = (2 * PI) / 5
+
+        val path = Path()
+        path.moveTo((centerX + radius * v[0] *  sin(0.0)).toFloat(), (centerY + radius * v[0] * -cos(0.0)).toFloat())
         for (i in 1 until 5) {
             val angle = i * angleStep
-            path1.lineTo((centerX + radius / 3 * 2 * sin(angle)).toFloat(), (centerY + radius / 3 * 2 * -cos(angle)).toFloat())
+            path.lineTo((centerX + radius * v[i] * sin(angle)).toFloat(), (centerY + radius * v[i] * -cos(angle)).toFloat())
         }
-        path1.close()
+        path.close()
 
-        // Dibujar el pentágono
-        paint.color = Color.BLACK
-        paint.style = Paint.Style.STROKE
-        paint.strokeWidth = 5f
-        canvas.drawPath(path1, paint)
-
-        val path2 = Path()
-        path2.moveTo((centerX + radius / 3  * sin(0.0)).toFloat(), (centerY + radius / 3 * -cos(0.0)).toFloat())
-        for (i in 1 until 5) {
-            val angle = i * angleStep
-            path2.lineTo((centerX + radius / 3 * sin(angle)).toFloat(), (centerY + radius / 3 * -cos(angle)).toFloat())
-        }
-        path2.close()
-
-        // Dibujar el pentágono
-        paint.color = Color.BLACK
-        paint.style = Paint.Style.STROKE
-        paint.strokeWidth = 5f
-        canvas.drawPath(path2, paint)
-
-
-
-
+        val paint = Paint()
+        paint.color = Color.CYAN
+        paint.style = Paint.Style.FILL
+        canvas.drawPath(path, paint)
     }
 }
