@@ -11,30 +11,20 @@
         android:id="@+id/llContainerProgressBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:background="@color/background_App"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:context=".ui.view.home.HomeFragment">
 
-        <com.idnp.skinguardianapp.ui.view.home.ProgressBar
-
-            android:id="@+id/lienzo"
-            android:layout_width="match_parent"
+        <com.idnp.skinguardianapp.ui.view.home.PentagonChart
+            android:layout_width="wrap_content"
             android:layout_height="300dp"
-            android:layout_marginHorizontal="10dp" />
-
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnNewRoutine"
-            android:layout_width="223dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="12dp"
-            android:backgroundTint="@color/background_button"
-            android:text="Incrementar Barra de Progreso"
-            android:textColor="@color/white" />
-
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </LinearLayout>
 
