@@ -1,6 +1,7 @@
 package com.idnp.skinguardianapp.presentation.view.login
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
@@ -39,62 +40,8 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initListeners()
-
-//        startTime = System.currentTimeMillis()
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            if (!checkPermissions()) {
-                requestPermissions()
-            }
-        } else {
-        }
-        val serviceIntent = Intent(this, LightSensorService::class.java)
-        startService(serviceIntent)
     }
-    //////////////
-    val PERMISSION_REQUEST_CODE = 123
 
-    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
-    private fun checkPermissions(): Boolean {
-        val permissionCheck = ContextCompat.checkSelfPermission(
-            this,
-            Manifest.permission.POST_NOTIFICATIONS
-        )
-        return permissionCheck == PackageManager.PERMISSION_GRANTED
-    }
-    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
-    private fun requestPermissions() {
-        ActivityCompat.requestPermissions(
-            this,
-            arrayOf(Manifest.permission.POST_NOTIFICATIONS),
-            PERMISSION_REQUEST_CODE
-        )
-    }
-//
-//    override fun onRequestPermissionsResult(
-//        requestCode: Int,
-//        permissions: Array<out String>,
-//        grantResults: IntArray
-//    ) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-//        if (requestCode == PERMISSION_REQUEST_CODE) {
-//            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//                startTimerService()
-//            } else {
-//                // Manejar el caso en el que el usuario deniega los permisos
-//            }
-//        }
-//    }
-
-//    private fun startTimerService() {
-//        val serviceIntent = Intent(this, TimerService::class.java)
-//        serviceIntent.putExtra("name", "Timer Service")
-//        serviceIntent.putExtra("duration", 20000)
-//        startService(serviceIntent)
-//    }
-
-
-    private var startTime = 0L
-    private var uniqueNotificationId = 0
     private fun initListeners() {
         binding.btnLogin.setOnClickListener {
             checkUserAccount()
