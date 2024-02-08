@@ -37,6 +37,11 @@
     <string name="texto9">Contiene un 10% de vitamina C en un sistema de administración estabilizado para ayudar a iluminar y uniformar el tono de la piel.</string>
     <string name="texto10">Su fórmula hipoalergénica utiliza limpiadores ultrasuaves junto con el mismo tipo de ingredientes hidratantes que se encuentran en las cremas tradicionales.</string>
 
-
+    <string name="calidad_de_piel">Calidad de piel</string>
+    <string name="sueno">Sueño</string>
+    <string name="alimentacion">Alimentación</string>
+    <string name="hidratacion">Hidratación</string>
+    <string name="estres">Estrés</string>
+    <string name="tus_estadisticas">TUS ESTADISTICAS</string>
 
 </resources>

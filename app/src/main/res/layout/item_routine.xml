@@ -10,39 +10,85 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <CheckBox
-            android:id="@+id/cbRoutine"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/background_button" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/tvRoutineTitle"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cbRoutine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/background_button" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                tools:text="protector Solar" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tvRoutineDescription"
-                android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/tvRoutineTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    tools:text="protector Solar" />
 
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                tools:text="utlizar protector Solar todos los dias" />
+                <TextView
+                    android:id="@+id/tvRoutineDescription"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    tools:text="utlizar protector Solar todos los dias" />
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/temporizadorContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/timerTitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Temporizador:"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tiempoTemporizador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="00:00"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Iniciar Temporizador" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
