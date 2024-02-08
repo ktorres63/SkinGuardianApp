@@ -1,5 +1,4 @@
 package com.idnp.skinguardianapp.data.services
-import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.app.Service
@@ -10,11 +9,7 @@ import android.os.IBinder
 import android.util.Log
 import androidx.core.app.NotificationCompat
 import com.idnp.skinguardianapp.presentation.view.login.LoginActivity
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+
 class TimerForegroundService : Service() {
 
     private var notificationManager: NotificationManager? = null

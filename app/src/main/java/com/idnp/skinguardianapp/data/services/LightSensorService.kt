@@ -15,9 +15,9 @@ class LightSensorService : Service(), SensorEventListener {
     private lateinit var sensorManager: SensorManager
     private var lightSensor: Sensor? = null
     private var maxLux: Float = 0f
-    private var thresholdLux: Float = 0f // Umbral de luz deseado
+    private var thresholdLux: Float = 20f // Umbral de luz deseado
     private var aboveThresholdDuration: Long = 0
-    private val thresholdDurationMillis: Long = 5000 // 5 segundos
+    private val thresholdDurationMillis: Long = 3000 // 5 segundos
 
     companion object {
         private const val NOTIFICATION_CHANNEL_ID = "LightSensorServiceChannel"
@@ -61,7 +61,7 @@ class LightSensorService : Service(), SensorEventListener {
 
                 Log.d("Light", "Luz tiempo: $aboveThresholdDuration")
                 if (aboveThresholdDuration >= thresholdDurationMillis) {
-                    showNotification("Max light detected", "Maximum light level: $maxLux")
+                    showNotification("Max light detected", "No olvides aplicarte protector solar")
 //                    stopSelf()
                 }
             } else {
