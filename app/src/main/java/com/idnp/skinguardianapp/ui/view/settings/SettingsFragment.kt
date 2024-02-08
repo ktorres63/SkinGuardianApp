@@ -1,5 +1,6 @@
 package com.idnp.skinguardianapp.ui.view.settings
 
+
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +9,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.app.AppCompatDelegate.*
+
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.dataStore
@@ -146,6 +151,21 @@ class SettingsFragment : Fragment() {
         }
     }
 
+    private fun enableDarkMode() {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        (requireActivity() as? AppCompatActivity)?.delegate?.apply {
+            localNightMode = AppCompatDelegate.MODE_NIGHT_YES
+        }
+        requireActivity().recreate()
 
+    }
+
+    private fun disableDarkMode() {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        (requireActivity() as? AppCompatActivity)?.delegate?.apply {
+            localNightMode = AppCompatDelegate.MODE_NIGHT_NO
+        }
+        requireActivity().recreate()
+    }
 }
 
