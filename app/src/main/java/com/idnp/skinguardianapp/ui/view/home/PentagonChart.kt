@@ -1,11 +1,13 @@
 package com.idnp.skinguardianapp.ui.view.home
 
 import android.content.Context
+import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.view.View
 import android.graphics.Color
 import android.graphics.Path
+import android.graphics.PorterDuff
 import android.util.AttributeSet
 import kotlin.math.*
 
@@ -16,6 +18,7 @@ class PentagonChart @JvmOverloads constructor(
 ) : View(context, attrs, defStyleAttr) {
 
     override fun onDraw(canvas: Canvas) {
+
         drawPentagon(0.33, canvas)
         drawPentagon(0.66, canvas)
         drawPentagon(1.0, canvas)
