@@ -7,41 +7,42 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.idnp.skinguardianapp.R
 import com.idnp.skinguardianapp.databinding.FragmentProductsBinding
+import com.idnp.skinguardianapp.databinding.FragmentRoutinesBinding
+import com.idnp.skinguardianapp.domain.model.ProductsProvider.Companion.productList
 import com.idnp.skinguardianapp.presentation.adapters.ProductsAdapter
+import com.idnp.skinguardianapp.presentation.adapters.RoutinesAdapter
 
 
 class ProductsFragment : Fragment() {
 
     private var _binding: FragmentProductsBinding? = null
     private val binding get() = _binding!!
+    private lateinit var  rvProducts: RecyclerView
+    private lateinit var productAdapter: ProductsAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentProductsBinding.inflate(inflater, container, false)
-        val view = binding.root
-
-        // Listas de títulos y descripciones
-        val titlesList = mutableListOf<String>()
-        val descriptionsList = mutableListOf<String>()
-        for (i in 1..10) {
-//            titlesList.add(getString(resources.getIdentifier("titulo$i", "string", requireContext().packageName)))
-//            descriptionsList.add(getString(resources.getIdentifier("texto$i", "string", requireContext().packageName)))
-        }
-
-        // Set up RecyclerView
-        val recyclerView = binding.rvProducts
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView.adapter = ProductsAdapter(requireContext(), titlesList, descriptionsList)
-
-        return view
+        _binding = FragmentProductsBinding.inflate(layoutInflater,container,false)
+        return binding.root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initComponent()
+        initUI()
     }
+    private fun initComponent(){
+        rvProducts = binding.rvProducts
+    }
+
+    private fun initUI(){
+        productAdapter = ProductsAdapter(productList)
+        rvProducts.layoutManager = LinearLayoutManager(context)
+        rvProducts.adapter = productAdapter
+
+    }
+
 }

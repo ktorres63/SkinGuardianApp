@@ -2,52 +2,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="230dp"
     android:layout_marginVertical="4dp"
     app:cardBackgroundColor="@color/background_button2"
     app:cardCornerRadius="16dp">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:background="@color/white">
+        android:layout_height="match_parent"
+        android:paddingHorizontal="8dp">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/title_image"
-            android:layout_width="137dp"
-            android:layout_height="153dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/appdraw"
-            app:layout_constraintStart_toStartOf="parent" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvImage"
+            android:layout_width="140dp"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="10dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="0dp"
+            <ImageView
+                android:id="@+id/ivProductIMG"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/tvProductTitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:background="@color/background_Card3">
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cvImage"
+            app:layout_constraintTop_toTopOf="@+id/cvImage"
+            tools:text="PRODUCTO 1" />
 
-            <TextView
-                android:id="@+id/tvRoutineTitle"
-                android:layout_width="match_parent"
-                android:layout_height="106dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:gravity="center_horizontal|center_vertical"
-                tools:text="     Glow Toner" />
+        <TextView
+            android:id="@+id/tvProductDescription"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cvImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductTitle"
+            tools:text="mp on Ubu our6 oz bottle." />
 
-            <TextView
-                android:id="@+id/tvRoutineDescription"
-                android:layout_width="match_parent"
-                android:layout_height="93dp"
-                android:layout_marginHorizontal="16dp"
-                android:textColor="@color/black"
-                android:textSize="12sp"
-                android:gravity="center"
-                tools:text="    Utilizado para la cara" />
-        </LinearLayout>
-    </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mas detalle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cvImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductDescription" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
