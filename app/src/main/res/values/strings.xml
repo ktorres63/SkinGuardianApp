@@ -15,5 +15,28 @@
     <string name="register">registrar</string>
     <string name="app_name2">Skin Guardian</string>
 
+    <string name="titulo1">Tónico Glow Facial</string>
+    <string name="titulo2">Gel limpiador espumoso</string>
+    <string name="titulo3">Bepanthen</string>
+    <string name="titulo4">Glowscreen SPF 40</string>
+    <string name="titulo5">Crema Hidratante Reparadora con Aloe Vera</string>
+    <string name="titulo6">Refinación de Poros Neutrogena</string>
+    <string name="titulo7">Hydro Boost Gel Limpiador</string>
+    <string name="titulo8">Mascara facial de Avena Aveeno</string>
+    <string name="titulo9">Vitamica C Serum</string>
+    <string name="titulo10">Dove Body Wash</string>
+
+    <string name="texto1">Revitaliza la piel para reducir el aspecto de los poros y conferirle al cutis un efecto suavizante, rellenador e iluminador.</string>
+    <string name="texto2">Un limpiador facial espumoso es ideal para eliminar el exceso de grasa, suciedad y maquillaje, y elegir uno que sea suave, que no altere la barrera protectora natural de la piel.</string>
+    <string name="texto3">Acelera el proceso de regeneración de la piel. Auxiliar en la cicatrización de heridas, fisuras y erosiones cutáneas. Alivia el ardor y comezón.</string>
+    <string name="texto4">Protector solar que combate manchas e inperfecciones a la ves.</string>
+    <string name="texto5">La crema hidratantereparadora con aloe vera es un producto de cuidado de la piel diseñado para proporcionar hidratación, nutrición y reparación a la piel.</string>
+    <string name="texto6">Este tóner combina ácidos glicólico y salicílico para ayudar a eliminar la suciedad, el aceite y las células muertas de la superficie de la piel para iluminar la tez.</string>
+    <string name="texto7">Proporciona una limpieza adecuada sin pelar la piel</string>
+    <string name="texto8">La máscara de avena y calabaza de Aveeno es una gran opción para hidratar y proteger la piel inflamada, tiene propiedades antiinflamatorias.</string>
+    <string name="texto9">Contiene un 10% de vitamina C en un sistema de administración estabilizado para ayudar a iluminar y uniformar el tono de la piel.</string>
+    <string name="texto10">Su fórmula hipoalergénica utiliza limpiadores ultrasuaves junto con el mismo tipo de ingredientes hidratantes que se encuentran en las cremas tradicionales.</string>
+
+
 
 </resources>

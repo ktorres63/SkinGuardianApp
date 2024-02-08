@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.idnp.skinguardianapp.R
@@ -16,6 +17,7 @@ import com.idnp.skinguardianapp.databinding.ActivityLoginBinding
 import com.idnp.skinguardianapp.presentation.view.home.BaseActivity
 import com.idnp.skinguardianapp.presentation.viewModel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
@@ -24,6 +26,9 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Thread.sleep(2000)
+        installSplashScreen()
+
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initListeners()
@@ -70,12 +75,13 @@ class LoginActivity : AppCompatActivity() {
     private fun registerUser() {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
+
+
         fragmentTransaction.replace(R.id.fragmentContainer, RegisterUserFragment())
         fragmentTransaction.commit()
 
         val lContainer: LinearLayout = findViewById(R.id.llContainer)
         lContainer.visibility = View.GONE
-
         findViewById<Button>(R.id.btnLogin).visibility = View.GONE
         findViewById<Button>(R.id.btnRegister).visibility = View.GONE
     }
