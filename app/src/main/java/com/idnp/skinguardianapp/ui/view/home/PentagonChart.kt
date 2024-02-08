@@ -1,13 +1,11 @@
 package com.idnp.skinguardianapp.ui.view.home
 
 import android.content.Context
-import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.view.View
 import android.graphics.Color
 import android.graphics.Path
-import android.graphics.PorterDuff
 import android.util.AttributeSet
 import kotlin.math.*
 
@@ -16,14 +14,17 @@ class PentagonChart @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
-
+    private var data = doubleArrayOf()
+    fun setData(data: DoubleArray) {
+        this.data = data
+        invalidate()  // Invalida la vista para que se vuelva a dibujar con los nuevos datos
+    }
     override fun onDraw(canvas: Canvas) {
 
         drawPentagon(0.33, canvas)
         drawPentagon(0.66, canvas)
         drawPentagon(1.0, canvas)
-        val values = arrayOf(0.50, 0.71, 0.52, 0.10, 0.34)
-        drawPrincipal(values, canvas)
+        drawPrincipal(data, canvas)
     }
     private fun drawPentagon(r : Double, canvas : Canvas) {
         val centerX = width / 2
@@ -46,7 +47,7 @@ class PentagonChart @JvmOverloads constructor(
         canvas.drawPath(path, paint)
     }
 
-    private fun drawPrincipal(v : Array<Double>, canvas : Canvas) {
+    private fun drawPrincipal(v : DoubleArray, canvas : Canvas) {
         val centerX = width / 2
         val centerY = height / 2
         val radius = min(centerX, centerY)
