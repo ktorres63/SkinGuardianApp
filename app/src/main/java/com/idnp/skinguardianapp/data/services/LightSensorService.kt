@@ -61,7 +61,7 @@ class LightSensorService : Service(), SensorEventListener {
 
                 Log.d("Light", "Luz tiempo: $aboveThresholdDuration")
                 if (aboveThresholdDuration >= thresholdDurationMillis) {
-                    showNotification("Max light detected", "No olvides aplicarte protector solar")
+                    showNotification("Recuerde usar protector solar si está en exteriores", "Se ha detectado una un alta luminosidad: $maxLux")
 //                    stopSelf()
                 }
             } else {
