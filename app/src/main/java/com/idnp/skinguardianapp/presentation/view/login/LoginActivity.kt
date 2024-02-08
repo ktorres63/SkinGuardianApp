@@ -1,4 +1,4 @@
-package com.idnp.skinguardianapp.ui.view.login
+package com.idnp.skinguardianapp.presentation.view.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,17 +9,13 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.fragment.app.FragmentContainer
-import androidx.fragment.app.FragmentContainerView
 import com.idnp.skinguardianapp.R
 import com.idnp.skinguardianapp.data.database.SkinGuardian
-import com.idnp.skinguardianapp.data.model.User
+import com.idnp.skinguardianapp.domain.model.User
 import com.idnp.skinguardianapp.databinding.ActivityLoginBinding
-import com.idnp.skinguardianapp.ui.view.home.BaseActivity
-import com.idnp.skinguardianapp.ui.viewModel.LoginViewModel
+import com.idnp.skinguardianapp.presentation.view.home.BaseActivity
+import com.idnp.skinguardianapp.presentation.viewModel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.HiltAndroidApp
 
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {

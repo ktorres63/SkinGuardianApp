@@ -1,4 +1,4 @@
-package com.idnp.skinguardianapp.ui.view.login
+package com.idnp.skinguardianapp.presentation.view.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.idnp.skinguardianapp.data.model.User
+import com.idnp.skinguardianapp.domain.model.User
 import com.idnp.skinguardianapp.databinding.FragmentRegisterUserBinding
-import com.idnp.skinguardianapp.ui.viewModel.RegisterViewModel
+import com.idnp.skinguardianapp.presentation.viewModel.RegisterViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -1,4 +1,4 @@
-package com.idnp.skinguardianapp.data.model
+package com.idnp.skinguardianapp.domain.model
 
 import com.idnp.skinguardianapp.data.database.entities.UserEntity
 

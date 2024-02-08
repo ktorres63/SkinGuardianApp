@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/background_App"
     android:orientation="vertical"
-    tools:context=".ui.view.routines.RoutinesFragment">
+    tools:context=".presentation.view.routines.RoutinesFragment">
 
 
     <FrameLayout

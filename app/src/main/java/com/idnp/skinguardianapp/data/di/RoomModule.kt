@@ -1,4 +1,4 @@
-package com.idnp.skinguardianapp.di
+package com.idnp.skinguardianapp.data.di
 
 import android.content.Context
 import androidx.room.Room

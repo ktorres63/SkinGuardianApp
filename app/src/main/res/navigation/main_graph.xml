@@ -7,46 +7,46 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.idnp.skinguardianapp.ui.view.profile.ProfileFragment"
+        android:name="com.idnp.skinguardianapp.presentation.view.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile">
 
     </fragment>
     <fragment
         android:id="@+id/routinesFragment"
-        android:name="com.idnp.skinguardianapp.ui.view.routines.RoutinesFragment"
+        android:name="com.idnp.skinguardianapp.presentation.view.routines.RoutinesFragment"
         android:label="fragment_routines"
         tools:layout="@layout/fragment_routines" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.idnp.skinguardianapp.ui.view.home.HomeFragment"
+        android:name="com.idnp.skinguardianapp.presentation.view.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <activity
         android:id="@+id/baseActivity"
-        android:name="com.idnp.skinguardianapp.ui.view.home.BaseActivity"
+        android:name="com.idnp.skinguardianapp.presentation.view.home.BaseActivity"
         android:label="activity_base"
         tools:layout="@layout/activity_base">
 
     </activity>
     <fragment
         android:id="@+id/productsFragment"
-        android:name="com.idnp.skinguardianapp.ui.view.products.ProductsFragment"
+        android:name="com.idnp.skinguardianapp.presentation.view.products.ProductsFragment"
         android:label="fragment_products"
         tools:layout="@layout/fragment_products" />
     <activity
         android:id="@+id/loginActivity"
-        android:name="com.idnp.skinguardianapp.ui.view.login.LoginActivity"
+        android:name="com.idnp.skinguardianapp.presentation.view.login.LoginActivity"
         android:label="activity_login"
         tools:layout="@layout/activity_login" />
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.idnp.skinguardianapp.ui.view.settings.SettingsFragment"
+        android:name="com.idnp.skinguardianapp.presentation.view.settings.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/registerUserFragment"
-        android:name="com.idnp.skinguardianapp.ui.view.login.RegisterUserFragment"
+        android:name="com.idnp.skinguardianapp.presentation.view.login.RegisterUserFragment"
         android:label="RegisterUserFragment"
         tools:layout="@layout/fragment_register_user" />
 </navigation>

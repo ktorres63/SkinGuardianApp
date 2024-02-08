@@ -1,10 +1,9 @@
-package com.idnp.skinguardianapp.ui.viewModel
+package com.idnp.skinguardianapp.presentation.viewModel
 
 
 import androidx.lifecycle.ViewModel
 import com.idnp.skinguardianapp.data.ApplicationRepository
-import com.idnp.skinguardianapp.data.model.User
-import com.idnp.skinguardianapp.data.model.toDomain
+import com.idnp.skinguardianapp.domain.model.User
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

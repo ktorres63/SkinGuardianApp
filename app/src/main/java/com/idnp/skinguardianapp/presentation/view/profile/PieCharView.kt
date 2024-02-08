@@ -1,4 +1,4 @@
-package com.idnp.skinguardianapp.ui.view.profile
+package com.idnp.skinguardianapp.presentation.view.profile
 
 import android.content.Context
 import android.graphics.Canvas

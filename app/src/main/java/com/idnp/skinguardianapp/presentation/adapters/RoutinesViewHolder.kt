@@ -1,4 +1,4 @@
-package com.idnp.skinguardianapp.data.adapters
+package com.idnp.skinguardianapp.presentation.adapters
 
 import android.graphics.Paint
 import android.util.Log
@@ -7,7 +7,7 @@ import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.idnp.skinguardianapp.R
-import com.idnp.skinguardianapp.data.model.Routine
+import com.idnp.skinguardianapp.domain.model.Routine
 import com.idnp.skinguardianapp.databinding.ItemRoutineBinding
 
 class RoutinesViewHolder(view: View): RecyclerView.ViewHolder(view) {

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/background_App"
     android:paddingHorizontal="43dp"
-    tools:context=".ui.view.login.LoginActivity">
+    tools:context=".presentation.view.login.LoginActivity">
 
     <ImageView
         android:id="@+id/ivPerfil"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_App"
-    tools:context=".ui.view.home.HomeFragment">
+    tools:context=".presentation.view.home.HomeFragment">
 
     <LinearLayout
         android:id="@+id/llContainerProgressBar"
@@ -15,9 +15,9 @@
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:context=".ui.view.home.HomeFragment">
+        tools:context=".presentation.view.home.HomeFragment">
 
-        <com.idnp.skinguardianapp.ui.view.home.ProgressBar
+        <com.idnp.skinguardianapp.presentation.view.home.ProgressBar
 
             android:id="@+id/lienzo"
             android:layout_width="match_parent"

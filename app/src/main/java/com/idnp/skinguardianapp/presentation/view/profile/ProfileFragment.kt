@@ -1,19 +1,15 @@
-package com.idnp.skinguardianapp.ui.view.profile
+package com.idnp.skinguardianapp.presentation.view.profile
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.activity.viewModels
 import androidx.fragment.app.viewModels
-import com.idnp.skinguardianapp.R
 import com.idnp.skinguardianapp.data.database.SkinGuardian
 import com.idnp.skinguardianapp.databinding.FragmentProfileBinding
-import com.idnp.skinguardianapp.ui.viewModel.LoginViewModel
-import com.idnp.skinguardianapp.ui.viewModel.ProfileViewModel
+import com.idnp.skinguardianapp.presentation.viewModel.ProfileViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

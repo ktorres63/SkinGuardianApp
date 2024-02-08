@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_App"
-    tools:context=".ui.view.profile.ProfileFragment">
+    tools:context=".presentation.view.profile.ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -167,7 +167,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.idnp.skinguardianapp.ui.view.profile.PieChartView
+            <com.idnp.skinguardianapp.presentation.view.profile.PieChartView
                 android:id="@+id/cvPieChart"
                 android:layout_width="150dp"
                 android:layout_height="150dp"

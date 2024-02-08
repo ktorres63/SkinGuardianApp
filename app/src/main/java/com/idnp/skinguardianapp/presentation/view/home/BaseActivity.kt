@@ -1,17 +1,12 @@
-package com.idnp.skinguardianapp.ui.view.home
+package com.idnp.skinguardianapp.presentation.view.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
-import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.idnp.skinguardianapp.R
 import com.idnp.skinguardianapp.databinding.ActivityBaseBinding
-import com.idnp.skinguardianapp.ui.view.login.RegisterUserFragment
-import com.idnp.skinguardianapp.ui.view.profile.ProfileFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 //import com.idnp.skinguardianapp.ui.view.profile.ProfileFragmentArgs
